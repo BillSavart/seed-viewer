@@ -1,0 +1,55 @@
+{
+  "samples": [
+    {
+      "archive": "soma_uniform",
+      "name": "egypt_dance_R_003__A275",
+      "bytes": 1436255,
+      "seconds": 6.412
+    },
+    {
+      "archive": "soma_uniform",
+      "name": "salute_001__A438",
+      "bytes": 556019,
+      "seconds": 0.008
+    },
+    {
+      "archive": "soma_uniform",
+      "name": "medium_big_heavy_one_hand_pick_up_right_side_high_R_002__A520_M",
+      "bytes": 1391044,
+      "seconds": 0.01
+    },
+    {
+      "archive": "soma_uniform",
+      "name": "jog_ff_loop_180_R_002__A212",
+      "bytes": 799835,
+      "seconds": 0.007
+    },
+    {
+      "archive": "g1",
+      "name": "vertical_mountain_climber_R_003__A359_M",
+      "bytes": 288250,
+      "seconds": 1.719
+    },
+    {
+      "archive": "g1",
+      "name": "dance_vouge_dutty_wine_4_directions_R_002__A321",
+      "bytes": 342272,
+      "seconds": 0.008
+    },
+    {
+      "archive": "g1",
+      "name": "dance_basic_first_entry_position_R_002__A307_M",
+      "bytes": 230786,
+      "seconds": 0.009
+    },
+    {
+      "archive": "g1",
+      "name": "kneeling_start_002__A098_M",
+      "bytes": 187709,
+      "seconds": 0.007
+    }
+  ],
+  "result": "PASS",
+  "catalog_total": 142220,
+  "independent_preview_matches": 4
+}

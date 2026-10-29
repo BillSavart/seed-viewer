@@ -49,3 +49,13 @@ public/models3D/*
 !public/models3D/g1
 *.fbm/
 ~*.fbx
+
+# Local dataset indexes, avatar and runtime state
+/tools/local/archive-index/
+/tools/local/migration-status.json
+/tools/local/migration.lock
+/tools/local/node-*/
+*.gzindex
+*.sqlite
+*.partial
+*.vrm

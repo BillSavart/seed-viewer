@@ -1,0 +1,15 @@
+{
+  "url": "http://127.0.0.1:7860/",
+  "prompt": "A person walks forward.",
+  "model": "Kimodo-SOMA-RP-v1.1",
+  "generatedFrames": 180,
+  "fps": 30,
+  "mappedBones": 54,
+  "generatedOnGpu": true,
+  "automaticPreview": true,
+  "keyboardPlayback": true,
+  "frameStep": true,
+  "editingViewSwitch": true,
+  "playing": true,
+  "errors": []
+}

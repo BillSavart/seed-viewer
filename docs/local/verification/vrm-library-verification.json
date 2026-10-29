@@ -1,0 +1,389 @@
+{
+  "defaultModel": "vrm",
+  "libraryTotal": 142220,
+  "coverage": "20 categories, longest motion, mirrored motion; first/middle/last frame",
+  "samples": [
+    {
+      "name": "h_b_w_crouch_270_loop_001__A550",
+      "category": "Advanced Locomotion",
+      "frames": 800,
+      "mappedBones": 54,
+      "checkedFrames": [
+        0,
+        399,
+        799
+      ],
+      "finite": true,
+      "animated": true,
+      "loadAndCheckMs": 1056
+    },
+    {
+      "name": "come_down_50cm_box_R_001__A530",
+      "category": "Baseline",
+      "frames": 679,
+      "mappedBones": 54,
+      "checkedFrames": [
+        0,
+        339,
+        678
+      ],
+      "finite": true,
+      "animated": true,
+      "loadAndCheckMs": 1065
+    },
+    {
+      "name": "sit_on_heels_loop_009__A548",
+      "category": "Basic Locomotion Neutral",
+      "frames": 619,
+      "mappedBones": 54,
+      "checkedFrames": [
+        0,
+        309,
+        618
+      ],
+      "finite": true,
+      "animated": true,
+      "loadAndCheckMs": 1057
+    },
+    {
+      "name": "injured_leg_jog_ff_180_R_001__A542",
+      "category": "Basic Locomotion Styles",
+      "frames": 994,
+      "mappedBones": 54,
+      "checkedFrames": [
+        0,
+        496,
+        993
+      ],
+      "finite": true,
+      "animated": true,
+      "loadAndCheckMs": 1092
+    },
+    {
+      "name": "casual_greeting_R_001__A428",
+      "category": "Communication",
+      "frames": 490,
+      "mappedBones": 54,
+      "checkedFrames": [
+        0,
+        244,
+        489
+      ],
+      "finite": true,
+      "animated": true,
+      "loadAndCheckMs": 1093
+    },
+    {
+      "name": "clap_walk_180_ff_sit_down_R_001__A492",
+      "category": "Complex Actions",
+      "frames": 852,
+      "mappedBones": 54,
+      "checkedFrames": [
+        0,
+        425,
+        851
+      ],
+      "finite": true,
+      "animated": true,
+      "loadAndCheckMs": 1139
+    },
+    {
+      "name": "drinking_bottle_throw_270_R_001__A548",
+      "category": "Consuming",
+      "frames": 862,
+      "mappedBones": 54,
+      "checkedFrames": [
+        0,
+        430,
+        861
+      ],
+      "finite": true,
+      "animated": true,
+      "loadAndCheckMs": 1140
+    },
+    {
+      "name": "moonwalk_R_001__A533",
+      "category": "Dancing",
+      "frames": 867,
+      "mappedBones": 54,
+      "checkedFrames": [
+        0,
+        433,
+        866
+      ],
+      "finite": true,
+      "animated": true,
+      "loadAndCheckMs": 1052
+    },
+    {
+      "name": "feeding_birds_sitting_loop_R_001__A456",
+      "category": "Environments",
+      "frames": 918,
+      "mappedBones": 54,
+      "checkedFrames": [
+        0,
+        458,
+        917
+      ],
+      "finite": true,
+      "animated": true,
+      "loadAndCheckMs": 1172
+    },
+    {
+      "name": "take_a_sip_180_R_001__A548",
+      "category": "Gestures",
+      "frames": 723,
+      "mappedBones": 54,
+      "checkedFrames": [
+        0,
+        361,
+        722
+      ],
+      "finite": true,
+      "animated": true,
+      "loadAndCheckMs": 1360
+    },
+    {
+      "name": "crouch_operating_cupboard_low_in_R_001__A296",
+      "category": "Household",
+      "frames": 762,
+      "mappedBones": 54,
+      "checkedFrames": [
+        0,
+        380,
+        761
+      ],
+      "finite": true,
+      "animated": true,
+      "loadAndCheckMs": 1232
+    },
+    {
+      "name": "point_laugh_head_arm_225_R_001__A552",
+      "category": "Looking and Pointing",
+      "frames": 941,
+      "mappedBones": 54,
+      "checkedFrames": [
+        0,
+        470,
+        940
+      ],
+      "finite": true,
+      "animated": true,
+      "loadAndCheckMs": 1210
+    },
+    {
+      "name": "flap_wings_R_001__A533",
+      "category": "Magic",
+      "frames": 529,
+      "mappedBones": 54,
+      "checkedFrames": [
+        0,
+        264,
+        528
+      ],
+      "finite": true,
+      "animated": true,
+      "loadAndCheckMs": 1102
+    },
+    {
+      "name": "punch_self_face_R_001__A533",
+      "category": "Martial Arts",
+      "frames": 545,
+      "mappedBones": 54,
+      "checkedFrames": [
+        0,
+        272,
+        544
+      ],
+      "finite": true,
+      "animated": true,
+      "loadAndCheckMs": 1276
+    },
+    {
+      "name": "neutral_button press_001__A543",
+      "category": "Object Interaction",
+      "frames": 324,
+      "mappedBones": 54,
+      "checkedFrames": [
+        0,
+        161,
+        323
+      ],
+      "finite": true,
+      "animated": true,
+      "loadAndCheckMs": 1137
+    },
+    {
+      "name": "grab_walk_ff_180_002__A548",
+      "category": "Object Manipulation",
+      "frames": 959,
+      "mappedBones": 54,
+      "checkedFrames": [
+        0,
+        479,
+        958
+      ],
+      "finite": true,
+      "animated": true,
+      "loadAndCheckMs": 1374
+    },
+    {
+      "name": "reaching_up_R_001__A407",
+      "category": "Other",
+      "frames": 878,
+      "mappedBones": 54,
+      "checkedFrames": [
+        0,
+        438,
+        877
+      ],
+      "finite": true,
+      "animated": true,
+      "loadAndCheckMs": 1231
+    },
+    {
+      "name": "swimming_breaststroke_R_002__A533",
+      "category": "Sports",
+      "frames": 798,
+      "mappedBones": 54,
+      "checkedFrames": [
+        0,
+        398,
+        797
+      ],
+      "finite": true,
+      "animated": true,
+      "loadAndCheckMs": 1173
+    },
+    {
+      "name": "run_fall_R_001__A533",
+      "category": "Stunts",
+      "frames": 678,
+      "mappedBones": 54,
+      "checkedFrames": [
+        0,
+        338,
+        677
+      ],
+      "finite": true,
+      "animated": true,
+      "loadAndCheckMs": 1325
+    },
+    {
+      "name": "petting_cat_standing_R_001__A533",
+      "category": "Unusual Locomotion",
+      "frames": 864,
+      "mappedBones": 54,
+      "checkedFrames": [
+        0,
+        431,
+        863
+      ],
+      "finite": true,
+      "animated": true,
+      "loadAndCheckMs": 1173
+    },
+    {
+      "name": "dancecards1_CD_injured_L_leg_001__A006",
+      "category": "longest_motion",
+      "frames": 21617,
+      "mappedBones": 54,
+      "checkedFrames": [
+        0,
+        10808,
+        21616
+      ],
+      "finite": true,
+      "animated": true,
+      "loadAndCheckMs": 3457
+    },
+    {
+      "name": "inside_door_knob_left_side_open_R_002__A512_M",
+      "category": "mirrored_motion",
+      "frames": 577,
+      "mappedBones": 54,
+      "checkedFrames": [
+        0,
+        288,
+        576
+      ],
+      "finite": true,
+      "animated": true,
+      "loadAndCheckMs": 932
+    }
+  ],
+  "kimodoSamples": [
+    {
+      "path": "/home/imlab/Desktop/Bill/kimodo/kimodo/assets/demo/examples/kimodo-soma-rp/01_single_text_prompt/motion.npz",
+      "name": "01_single_text_prompt",
+      "frames": 150,
+      "model": "vrm",
+      "mappedBones": 54,
+      "finite": true
+    },
+    {
+      "path": "/home/imlab/Desktop/Bill/kimodo/kimodo/assets/demo/examples/kimodo-soma-rp/02_multi_text_prompt/motion.npz",
+      "name": "02_multi_text_prompt",
+      "frames": 227,
+      "model": "vrm",
+      "mappedBones": 54,
+      "finite": true
+    },
+    {
+      "path": "/home/imlab/Desktop/Bill/kimodo/kimodo/assets/demo/examples/kimodo-soma-rp/03_full_body_keyframes/motion.npz",
+      "name": "03_full_body_keyframes",
+      "frames": 150,
+      "model": "vrm",
+      "mappedBones": 54,
+      "finite": true
+    },
+    {
+      "path": "/home/imlab/Desktop/Bill/kimodo/kimodo/assets/demo/examples/kimodo-soma-rp/04_ee_constraint/motion.npz",
+      "name": "04_ee_constraint",
+      "frames": 151,
+      "model": "vrm",
+      "mappedBones": 54,
+      "finite": true
+    },
+    {
+      "path": "/home/imlab/Desktop/Bill/kimodo/kimodo/assets/demo/examples/kimodo-soma-rp/05_root_path/motion.npz",
+      "name": "05_root_path",
+      "frames": 300,
+      "model": "vrm",
+      "mappedBones": 54,
+      "finite": true
+    },
+    {
+      "path": "/home/imlab/Desktop/Bill/kimodo/kimodo/assets/demo/examples/kimodo-soma-rp/06_root_waypoints/motion.npz",
+      "name": "06_root_waypoints",
+      "frames": 181,
+      "model": "vrm",
+      "mappedBones": 54,
+      "finite": true
+    },
+    {
+      "path": "/home/imlab/Desktop/Bill/kimodo/kimodo/assets/demo/examples/kimodo-soma-rp/07_mixed_constraints/motion.npz",
+      "name": "07_mixed_constraints",
+      "frames": 152,
+      "model": "vrm",
+      "mappedBones": 54,
+      "finite": true
+    },
+    {
+      "path": "/home/imlab/Desktop/Bill/kimodo/kimodo/assets/demo/examples/kimodo-soma-rp/08_stylized_text/motion.npz",
+      "name": "08_stylized_text",
+      "frames": 121,
+      "model": "vrm",
+      "mappedBones": 54,
+      "finite": true
+    }
+  ],
+  "final": {
+    "model": "vrm",
+    "name": "moonwalk_R_001__A533",
+    "playing": true,
+    "frame": 166.73340000629423,
+    "badge": "142,220 個動作 · VRoid"
+  },
+  "errors": []
+}

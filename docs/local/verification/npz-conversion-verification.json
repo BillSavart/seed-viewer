@@ -1,0 +1,7 @@
+{
+  "rotation_matrix_max_error": 4.15342442324218e-05,
+  "rotation_matrix_tolerance": 0.0001,
+  "root_max_error_meters": 9.5367431640625e-07,
+  "fps": 30.000000030000002,
+  "frames": 150
+}

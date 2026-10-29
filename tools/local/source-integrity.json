@@ -1,0 +1,26 @@
+{
+  "started_at": "2026-10-09T16:18:41+0800",
+  "archives": {
+    "soma_uniform.tar.gz": {
+      "bytes": 45188088297,
+      "expected_sha256": "0c1fd91628d2644d0d7c0b735ae64faa5fa79834280bc1ce7860a871e55f912c",
+      "actual_sha256": "0c1fd91628d2644d0d7c0b735ae64faa5fa79834280bc1ce7860a871e55f912c",
+      "matches": true
+    },
+    "soma_proportional.tar.gz": {
+      "bytes": 45468083856,
+      "expected_sha256": "f028c26602d6565e706f59e84da0aecfcd05d7348ed1f1f6dec729fd70d32838",
+      "actual_sha256": "f028c26602d6565e706f59e84da0aecfcd05d7348ed1f1f6dec729fd70d32838",
+      "matches": true
+    },
+    "g1.tar.gz": {
+      "bytes": 23499973647,
+      "expected_sha256": "52580ea8bced72ea9e2ff1e7b68f01c51c7f1099581e9a46b7c87e1dec106d8a",
+      "actual_sha256": "52580ea8bced72ea9e2ff1e7b68f01c51c7f1099581e9a46b7c87e1dec106d8a",
+      "matches": true
+    }
+  },
+  "status": "passed",
+  "current_archive": "g1.tar.gz",
+  "finished_at": "2026-10-09T16:20:06+0800"
+}

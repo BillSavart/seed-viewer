@@ -1,0 +1,4 @@
+2026-10-09: Transcend ST2000LM007-1R8174 WDZ37X9B
+USB reset and persistent write timeout / lost async page writes.
+SMART current-pending-sector=32; offline-uncorrectable=32.
+Do not resume migration or remove original dataset before storage recovery.

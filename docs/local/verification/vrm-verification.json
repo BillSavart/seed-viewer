@@ -1,0 +1,16 @@
+{
+  "model": "vrm",
+  "name": "inside_door_knob_left_side_open_R_002__A512",
+  "playing": true,
+  "frame": 39.53040000915527,
+  "frames": 577,
+  "mappedBones": 54,
+  "sourceRestPose": "BONES-SEED (calibrated)",
+  "heightScale": 0.753777272653414,
+  "bonesSeedAnimated": true,
+  "kimodoNpzImported": true,
+  "importedMotionSurvivesSwitch": true,
+  "standardTposeError": 0,
+  "invalidImportPreservesMotion": true,
+  "errors": []
+}

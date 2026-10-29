@@ -1,0 +1,35 @@
+{
+  "source": "/home/imlab/Desktop/Bill/bones-seed/metadata/seed_metadata_v004.parquet",
+  "source_sha256": "7cbe5624f91ae19af3feee69cff74b2cf553fb26367c8edc4b674c3d8ea97e7d",
+  "fps": 120,
+  "total_count": 142220,
+  "original_count": 71132,
+  "mirror_count": 71088,
+  "total_hours": 288.3208449074074,
+  "original_hours": 144.21574305555555,
+  "mirror_hours": 144.10510185185186,
+  "originals_without_mirror": 44,
+  "mirror_frame_delta_counts": {
+    "0": 63435,
+    "-1": 7645,
+    "1": 8
+  },
+  "original_duration_seconds": {
+    "count": 71132.0,
+    "mean": 7.2987779761570035,
+    "std": 7.120229932553557,
+    "min": 0.575,
+    "1%": 1.9666666666666666,
+    "5%": 2.525,
+    "10%": 2.9583333333333335,
+    "25%": 4.0,
+    "50%": 5.708333333333333,
+    "75%": 8.358333333333333,
+    "90%": 12.616666666666667,
+    "95%": 15.766666666666667,
+    "99%": 30.21725000000006,
+    "max": 180.14166666666668
+  },
+  "original_unique_content_names": 3813,
+  "original_actors": 522
+}

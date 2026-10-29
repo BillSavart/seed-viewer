@@ -1,5 +1,7 @@
 # BONES-SEED Viewer
 
+本 fork 的本機功能與開發進度見 [PROGRESS.md](PROGRESS.md)：SSD 壓縮資料直接播放、VRM 重定向、Kimodo 動作匯入與生成介面整合。索引與驗證工具見 [tools/local/README.md](tools/local/README.md)。
+
 A web application for browsing the BONES-SEED motion capture dataset. Renders skeleton animations on 3D character models in the browser using Three.js, with a searchable file browser, metadata panel, and temporal label overlay.
 
 Supports two character models: 
