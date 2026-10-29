@@ -6,6 +6,7 @@ import * as THREE from 'three';
 import { SkeletonHelper2, JointHelper } from './customSkeletonHelper.js';
 import { Animation } from './animation.ts';
 import { G1Animation } from './g1_animation.ts';
+import { VRMModel } from './vrm_model.ts';
 import { loadSettings, applyLightingSettings } from './lighting_settings.ts';
 
 // @ts-ignore
@@ -13,7 +14,10 @@ import SomaTextureUrl from '/models3D/SOMA/Nova_c_skin_diffuseReflectionColor.10
 
 export async function init3DModel(modelUrl:string, scale = 1, rotation: [number, number, number] = [0, 0, 0]) {
     // Determine model class based on current model type
-    if (g.CURRENT_MODEL === 'g1') {
+    if (g.CURRENT_MODEL === 'vrm') {
+        g.MODEL3D = new VRMModel();
+        await g.MODEL3D.init(modelUrl);
+    } else if (g.CURRENT_MODEL === 'g1') {
         g.MODEL3D = new Model3DG1();
         await (g.MODEL3D as Model3DG1).init(modelUrl, scale, rotation);
     } else {
@@ -237,6 +241,7 @@ applySomaMaterials() {
     const t = frame - framef
 
     const sourceAnim = this.anim;
+    const sourceClip = sourceAnim.getOriginalSomaClip();
     const targetModel3D = this;
 
     // SOMA FBX bones have underscore prefix (_Hips), BVH tracks use plain names (Hips)
@@ -248,7 +253,7 @@ applySomaMaterials() {
     function __copyRotation(bone: THREE.Bone) {
       const bvhName = toBvhName(bone.name);
       //// find track with the same name as the bone
-      sourceAnim.anim.clip.tracks.forEach(track => {
+      sourceClip.tracks.forEach(track => {
         if (track.name.split(".")[0] === bvhName) {
 
           if (bvhName === "Hips" && track.name.split(".")[1] === "position") {
@@ -653,4 +658,3 @@ export class Model3DG1 {
         this.joints.clear();
     }
 }
-

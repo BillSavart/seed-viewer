@@ -130,6 +130,7 @@ const G1_DEFAULTS: LightingSettings = {
 };
 
 export const LIGHTING_DEFAULTS: Record<ModelType, LightingSettings> = {
+    vrm: { ...SOMA_DEFAULTS, version: 1, cssSaturate: 1, toneMappingExposure: 1, env_useHDR: 0 },
     soma: { ...SOMA_DEFAULTS },
     g1: { ...G1_DEFAULTS },
 };
@@ -235,6 +236,7 @@ const DARK_PARTS = [
 ];
 
 function applyMaterialSettings(s: LightingSettings): void {
+    if (g.CURRENT_MODEL === 'vrm') return; // Preserve the avatar's MToon colors and textures.
     if (!g.MODEL3D || !g.MODEL3D.object) return;
 
     g.MODEL3D.object.traverse((child: any) => {

@@ -26,6 +26,7 @@ export function initDownloadAnimButton() {
 }
 
 export function setAnimToDownload(bvhUrl:string, bvhName:string){
+    if (lg.BVH_URL?.startsWith('blob:') && lg.BVH_URL !== bvhUrl) URL.revokeObjectURL(lg.BVH_URL);
     lg.BVH_URL = bvhUrl;
     lg.BVH_NAME = bvhName;
 }

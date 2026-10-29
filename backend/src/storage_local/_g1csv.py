@@ -3,6 +3,8 @@ from pathlib import Path
 from fastapi import APIRouter
 from fastapi.responses import JSONResponse
 from globals import Global
+import os
+from archive_storage import archive_ready
 
 router = APIRouter()
 
@@ -10,6 +12,8 @@ router = APIRouter()
 @router.get("/")
 def g1csv(csvpath: str = None, random: bool = False):
     """Serve G1 robot animation CSV files."""
+    if os.environ.get('BONES_ARCHIVE_ROOT') and not archive_ready('g1'):
+        return JSONResponse(status_code=503, content={"error": "G1 動作庫正在準備中；目前可先觀看 SOMA 動作。"})
 
     assert csvpath is not None or random is not None, "Either csvpath or random must be provided."
 

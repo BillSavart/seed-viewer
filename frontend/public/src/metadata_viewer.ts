@@ -1,5 +1,6 @@
 
 export function fillTwoColumnMetadata(dict: { [key: string]: string }, preprocess: boolean = true) {
+    const escape = (value: unknown) => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]!));
     const table = document.getElementById("metadata-viewer-table")!;
     
     const keys = Object.keys(dict);
@@ -47,8 +48,8 @@ export function fillTwoColumnMetadata(dict: { [key: string]: string }, preproces
             ${
                 keys.map((key) => /*html*/`
                 <tr class="border-b border-gray-100 hover:bg-gray-50 break-words text-left text-sm">
-                    <td class="px-2 py-1 bg-gray-50 text-gray-600 break-all align-top font-semibold">${key}</td>
-                    <td class="px-2 py-1 align-top">${dict[key]}</td>
+                    <td class="px-2 py-1 bg-gray-50 text-gray-600 break-all align-top font-semibold">${escape(key)}</td>
+                    <td class="px-2 py-1 align-top">${escape(dict[key])}</td>
                 </tr>
                 `).join("")
             }

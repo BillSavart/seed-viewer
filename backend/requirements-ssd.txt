@@ -1,0 +1,2 @@
+# Extra dependency for direct playback from the local verified tar.gz archives.
+rapidgzip==0.16.0

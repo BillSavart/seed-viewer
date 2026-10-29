@@ -4,6 +4,7 @@ import { init3DModel, disposeModel3D } from "./models.ts";
 import { applySceneForModel } from "./threejs_builtin.js";
 import { refreshSettingsPanel } from "./settings_panel.ts";
 import { requestBVH } from "./browser/__requestBVH.ts";
+import { fetchTemporalLabels } from './temporal_labels.ts';
 
 import somaIconUrl from "../images/soma_icon.png";
 import g1IconUrl from "../images/g1_icon.png";
@@ -38,7 +39,7 @@ export function initModelSelector() {
             align-items: center;
             justify-content: center;
         ">
-            <img src="${icon}" alt="${key}" style="width: 100%; height: 100%; object-fit: contain; pointer-events: none;" />
+            ${key === 'vrm' ? '<span style="font-size:18px;font-weight:700;pointer-events:none">VRoid</span>' : `<img src="${icon}" alt="${key}" style="width: 100%; height: 100%; object-fit: contain; pointer-events: none;" />`}
         </button>
     `).join('');
 
@@ -66,15 +67,21 @@ export function initModelSelector() {
     });
 
     async function switchModel(newModelType: ModelType) {
+        if (switching) return;
         if (newModelType === g.CURRENT_MODEL) return;
 
         // Save current state before switching
         const savedAnimName = g.FILENAME;
+        const savedModelType = g.CURRENT_MODEL;
+        const savedAnim = g.MODEL3D?.anim;
+        const savedFrame = g.FRAME;
         const savedPlaying = g.PLAYING;
         const savedFollowing = g.CAMCON?.following ?? false;
         const savedSkeletonVisible = g.MODEL3D?.skeletonHelper?.visible ?? false;
 
         g.SPINNER.show("Switching model");
+        switching = true;
+        g.PLAYING = false;
 
         try {
             // Remove current model from scene
@@ -94,11 +101,14 @@ export function initModelSelector() {
             g.SCENE.add(g.MODEL3D.object);
 
             // Apply per-model scene settings (lights, camera)
-            applySceneForModel(newModelType);
+            await applySceneForModel(newModelType);
             refreshSettingsPanel();
 
             // Load the same animation for the new model (if one was playing)
-            if (savedAnimName) {
+            if (savedAnim && savedModelType !== 'g1' && newModelType !== 'g1') {
+                g.MODEL3D.anim = savedAnim;
+                g.FRAME = Math.min(savedFrame, savedAnim.maxFrame);
+            } else if (savedAnimName && (savedAnim as any)?.fromBrowser !== false) {
                 await requestBVH({ val: savedAnimName });
             } else {
                 // No animation was loaded yet — load first from browser table
@@ -106,6 +116,11 @@ export function initModelSelector() {
                 if (firstRow) {
                     (firstRow as HTMLElement).click();
                 }
+            }
+            if (g.MODEL3D.anim) {
+                g.LOOP_START = 0;
+                g.LOOP_END = g.MODEL3D.anim.maxFrame;
+                if ((g.MODEL3D.anim as any).fromBrowser === false) fetchTemporalLabels('');
             }
 
             // Restore playback state
@@ -123,6 +138,7 @@ export function initModelSelector() {
             alert("Failed to load model. Check console for details.");
         } finally {
             updateActiveState();
+            switching = false;
             g.SPINNER.hide("Switching model");
         }
     }
@@ -133,6 +149,8 @@ export function initModelSelector() {
         });
     });
 }
+
+let switching = false;
 
 function refreshTimelineButtons() {
     // Play/pause

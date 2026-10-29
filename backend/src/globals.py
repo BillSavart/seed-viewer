@@ -46,6 +46,13 @@ class Global:
         """
         full_path = os.path.join(Global.files_path, relative_path)
         if not Path(full_path).is_file():
+            from archive_storage import read_archive_file
+            content = read_archive_file(relative_path)
+            if content is not None:
+                return content
+            preview = Path('/home/imlab/Desktop/Bill/bones-preview') / relative_path
+            if preview.is_file():
+                return preview.read_text()
             return None
         with open(full_path, "r") as f:
             return f.read()
@@ -113,5 +120,7 @@ class Global:
 
     @staticmethod
     def deinitialize():
+        from archive_storage import close_archives
+        close_archives()
         logger.info("deinitializing globals...")
         logger.info("globals deinitialized!")

@@ -5,6 +5,7 @@ from storage_local.__local_helpers import get_matching_moves
 from fastapi.responses import JSONResponse
 from helpers import filter_metadata
 from globals import Global
+from local_migration import playable_moves
 
 router = APIRouter()
 
@@ -39,7 +40,7 @@ def get_moves(
     search_desc: bool = False,
 ):
     
-    moves = get_matching_moves(query, search_desc=search_desc)
+    moves = playable_moves(get_matching_moves(query, search_desc=search_desc))
     
     # if no bvh found
     if len(moves) == 0:

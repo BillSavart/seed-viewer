@@ -14,6 +14,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, "index.html"),
+        kimodoPreview: resolve(__dirname, "kimodo-preview.html"),
       },
       // output: {
       //   entryFileNames: `assets/[name].js`,
@@ -39,4 +40,3 @@ export default defineConfig({
   },
   
 });
-

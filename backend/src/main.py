@@ -10,6 +10,7 @@ from storage_local.main import router as storage_local_router
 from metadata.main import router as metadata_router
 
 from globals import Global
+from avatar import router as avatar_router
 
 
 class SharedArrayBufferMiddleware(BaseHTTPMiddleware):
@@ -18,6 +19,8 @@ class SharedArrayBufferMiddleware(BaseHTTPMiddleware):
         response = await call_next(request)
         response.headers["Cross-Origin-Embedder-Policy"] = "require-corp"
         response.headers["Cross-Origin-Opener-Policy"] = "same-origin"
+        if request.url.path == "/" or request.url.path.endswith(".html"):
+            response.headers["Cache-Control"] = "no-cache"
         return response
 
 
@@ -47,6 +50,13 @@ app.add_middleware(SharedArrayBufferMiddleware)
 api_app = FastAPI(**openapi, debug=True)
 api_app.include_router(storage_local_router, prefix="/storage_local")
 api_app.include_router(metadata_router, prefix="/metadata")
+api_app.include_router(avatar_router)
+
+@api_app.get('/migration-status')
+def local_migration_status():
+    from local_migration import migration_status
+    return migration_status()
+
 app.mount('/api', api_app)
 
 

@@ -61,7 +61,7 @@ export async function requestBVH({ random = false, val="" }) {
                 await loadBVHString(data.tree, data.name, true, data.metadata)
             }
             else  {
-                await loadBVHString(data.tree, data.name,  false, null)
+                await loadBVHString(data.tree, data.name,  true, null)
             }
         }
 
@@ -82,7 +82,6 @@ export async function requestBVH({ random = false, val="" }) {
         g.SPINNER.hide();
     }
 }
-
 
 
 

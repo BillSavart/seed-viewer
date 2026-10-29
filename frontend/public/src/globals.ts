@@ -1,5 +1,6 @@
 import {Animation} from "./animation.ts";
 import {Model3D, Model3DG1} from "./models.ts";
+import type { VRMModel } from './vrm_model.ts';
 
 // Import model files so Vite bundles them
 // @ts-ignore
@@ -7,7 +8,7 @@ import G1ModelUrl from "/models3D/g1/g1_Zup_robot_01.fbx";
 // @ts-ignore
 import SomaModelUrl from "/models3D/SOMA/soma_male_skel_minimal.fbx";
 
-export type ModelType = 'soma' | 'g1';
+export type ModelType = 'soma' | 'g1' | 'vrm';
 
 export interface ModelConfig {
     name: string;
@@ -20,6 +21,14 @@ export interface ModelConfig {
 }
 
 export const MODEL_CONFIGS: Record<ModelType, ModelConfig> = {
+    vrm: {
+        name: 'VRoid',
+        url: '/api/avatar',
+        scale: 1,
+        rotation: [0, 0, 0],
+        animFormat: 'bvh',
+        animEndpoint: '/storage_local/somabvh/'
+    },
     soma: {
         name: 'SOMA',
         url: SomaModelUrl,
@@ -50,7 +59,7 @@ interface Globals {
     ANIMATION: Animation,
     FRAME: number,
     PLAYING: boolean,
-    MODEL3D: Model3D | Model3DG1,
+    MODEL3D: Model3D | Model3DG1 | VRMModel,
     HEMISPHERE_LIGHT: any,
     DIRECTIONAL_LIGHT: any,
     FILL_LIGHT: any,
@@ -92,9 +101,7 @@ export const g: Globals = window.g = {
     PROMPT: "",
     URL_PARAMS: new URLSearchParams(window.location.search),
     DEFAULT_BROWSER_MODE: "localFiles",
-    CURRENT_MODEL: "soma" as ModelType
+    CURRENT_MODEL: "vrm" as ModelType
 
 } 
-
-
 

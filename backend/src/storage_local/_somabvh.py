@@ -3,6 +3,7 @@ from pathlib import Path
 from fastapi import APIRouter
 from fastapi.responses import JSONResponse
 from globals import Global
+from local_migration import playable_moves
 
 router = APIRouter()
 
@@ -14,7 +15,10 @@ def somabvh(bvhpath: str = None, random: bool = False):
     assert bvhpath is not None or random is not None, "Either bvhpath or random must be provided."
 
     if random:
-        move = Global.metadata.sample(n=1)
+        available = playable_moves(Global.metadata)
+        if available.empty:
+            return JSONResponse(status_code=503, content={"error": "SOMA 動作正在解壓縮，請稍後再試。"})
+        move = available.sample(n=1)
         filename = move.index[0]
         move = move.iloc[0].to_dict()
         move['filename'] = filename

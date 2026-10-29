@@ -21,11 +21,14 @@ import {initProjectionToggle} from "./projection_toggle.ts";
 import {initSettingsPanel} from "./settings_panel.ts";
 import {initTemporalLabels} from "./temporal_labels.ts";
 import {initTheme} from "./theme.ts";
+import {initMigrationStatus} from "./migration_status.ts";
+import { initMotionImport } from './motion_import.ts';
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 (async () => {
     initTheme();
+    initMigrationStatus();
     initSpinner();
     g.SPINNER.show()
 
@@ -58,7 +61,11 @@ import {initTheme} from "./theme.ts";
                     
         initTimeline();
         initTemporalLabels();
+        // Open this local installation with skeleton and action labels visible.
+        document.getElementById('skeletonButton')!.click();
+        document.getElementById('temporalLabelButton')!.click();
         initBrowser();
+        initMotionImport();
         initDivider();
 
         g.SCENE.add(g.MODEL3D.object);
